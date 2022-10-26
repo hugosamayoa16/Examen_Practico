@@ -2,7 +2,10 @@ package com.clientes.carrito.compras.services;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.clientes.carrito.compras.model.Cliente;
+import com.clientes.carrito.compras.model.ClienteRespose;
 import com.clientes.carrito.compras.model.Productos;
 
 public interface CrudServices {
@@ -19,6 +22,7 @@ public interface CrudServices {
 
 	Cliente rmvaddproductoCliente(int idcliente, int idproducto);
 
-	Cliente addproductoCliente(int idcliente, int  idproducto, int cantidad);
+	ClienteRespose addproductoCliente(int idcliente, int  idproducto, int cantidad);
 	List <Productos> showProductos();
+	ResponseEntity<String>  consumo();
 }

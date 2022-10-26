@@ -57,8 +57,13 @@ public class ProductosDatos {
 	
 	public boolean buscar (int id) {
 		boolean repuesta =false;
+		try {
+		
 		if (this.listaProductos.stream().filter(p->p.getId()==id )!=null) {
 			return repuesta =true;
+		}
+		}catch(Exception e) {
+			return  repuesta =false;
 		}
 		return repuesta ;
 	}
